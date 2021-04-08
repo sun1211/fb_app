@@ -1,5 +1,6 @@
 import 'package:fb_app/components/search_bar.dart';
 import 'package:fb_app/models/data.dart';
+import 'package:fb_app/screen/detail/detail_screen.dart';
 import 'package:fb_app/screen/home/components/message_card.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,16 @@ class Body extends StatelessWidget {
             children: List.generate(listUserMessages.length, (index) {
               return MessageCard(
                 userMessages: listUserMessages[index],
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => DetailScreen(
+                        message: listUserMessages[index],
+                      ),
+                    ),
+                  );
+                },
               );
             }),
           )
