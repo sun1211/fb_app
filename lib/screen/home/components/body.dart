@@ -1,9 +1,7 @@
 import 'package:fb_app/components/search_bar.dart';
-import 'package:fb_app/constants.dart';
 import 'package:fb_app/models/data.dart';
 import 'package:fb_app/screen/home/components/message_card.dart';
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 
 import 'list_user.dart';
 
